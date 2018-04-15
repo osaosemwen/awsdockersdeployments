@@ -29,10 +29,27 @@ This link is essential, as it makes monitoring the deployment easy. Although one
 ![external id](https://user-images.githubusercontent.com/17884787/38783510-f50c58a0-40d0-11e8-8e0d-459093366f5f.png)
 
 - Click Next permissions
-  
+- Click Next Review again (for now do not attach a policy to the role, this will be done later)
+- Give the role a name and description
+- Click Create Role, you will be returned with the role list of roles initially created.
+- Click on the role you just created.
+- Notice the ARN number, as this would be used for later.
+- Below right Click on "Add inline policy" as shown below
 
+ ![inline policy](https://user-images.githubusercontent.com/17884787/38783812-97074d32-40d5-11e8-8ab2-78d9866a53ae.png)
  
+- Click on the JSON tab. 
+- Copy and paste the JSON AWS IAM permission found from this link ``` https://docs.docker.com/docker-for-aws/iam-permissions/ ```  to the space available as shown below 
 
+![json policy](https://user-images.githubusercontent.com/17884787/38783894-0740b2a4-40d7-11e8-836c-88705a926228.png) 
+ 
+- Click Review Policy and Create policy
+
+- From the Role List Click the role you just created and copy the Role ARN, it is the first line on the summary page  something like arn:aws:iam::0123456849229485i:role/name-of-newrole
+
+## Adding your AWS account to Docker Cloud
+
+  
 ##### References
 - https://docs.docker.com/get-started/
 - https://blog.docker.com/2015/11/deploy-manage-cluster-docker-swarm/
