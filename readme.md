@@ -53,7 +53,7 @@ After completing the steps listed above on your AWS account, and succesfully att
 Go to your Dockers Cloud account.
 - Log in and select Swarm mode
 - Click on the "+" top middle then Swarm, or Click on Swarms then click on Create.
-- Click on the cloud provider as shown below, Although mine shows connected for AWS,
+- Click on the cloud provider as shown below, It should both show not conected (Although mine shows connected for AWS, This is because I am done this process earlier).
 
 ![selecting cloud provider as well as regions](https://user-images.githubusercontent.com/17884787/38784267-5ed6c200-40dd-11e8-90a4-1f5ee7f98f64.png)
 
@@ -61,7 +61,8 @@ Go to your Dockers Cloud account.
 
  ![aws credentials](https://user-images.githubusercontent.com/17884787/38784323-2bdc13fe-40de-11e8-82a7-690c6f476fc7.png)
 
-- Click Save, The plugin icon shown glow which means you are can now deploy a swarm from docker cloud to your AWS account.
+- Click Save, The plugin icon shown glow which means you are can now deploy a swarm from docker cloud to your AWS account, as shown below.
+
 
 ### Creating A Swarm 
   
