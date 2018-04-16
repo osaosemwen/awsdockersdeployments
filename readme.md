@@ -186,7 +186,9 @@ check your application on the cloud, you should have something similar to what I
 
 - In practice in is important to make use of DNS, and add further security on the TLS. Sticking to the initial diagram, we have sucessfully deployed same application on one region spreading it across different Availability Zones.
 
-# Deploying the your App on Different Regions, there are two ways of doing it, it either create similar swarm on two regions and use ELB to handle traffic accorss this regions or you ssh from a different region and connect to the swarm and deploy your stack over these regions.
+# Deploying the your App on Different Regions
+
+There are two ways of doing it, it either create similar swarm on two regions and use ELB to handle traffic accorss this regions or you ssh from a different region and connect to the swarm and deploy your stack over these regions.
 
 If anyone really wants this please send me an email, and I would create the repo. 
 
