@@ -131,9 +131,8 @@ and
 ![docker ps](https://user-images.githubusercontent.com/17884787/38791897-74408aa0-4118-11e8-8887-6bba0c867c8a.png)
 
 When you enter ls, you have a blank env, This is the problem in doing it this way is that, it becomes a little difficult to get your code to the swarm manager.
-----
 
-#### Getting your code into Docker environment. 
+### Getting your code into Docker environment. 
 
 - Create an image of an application using your most one of linux platform, I chose Ubuntu. 
 - When you enter ``` $ ls /var/run/``` you would see you have the text editor vi available. Hence use it to create a Dockerfile. ``` $ vi Dockerfile ``` 
