@@ -108,7 +108,9 @@ and
 - After these you should be able to run your stack directly on the swarm 
 
 ``` $ docker stack deploy -c docker-compose-3.yml mikedockerpractise ``` 
----- 
+
+Note
+-- 
 
 Please Note recently, this connection give problems, on some computer If you have issues, here is a work around the problem.
 
