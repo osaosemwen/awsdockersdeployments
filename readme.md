@@ -103,7 +103,7 @@ Go to your Dockers Cloud account.
 
 and 
 
-![docker ps](https://user-images.githubusercontent.com/17884787/38789544-f31aea2e-4108-11e8-9579-9877487803b5.png)
+![docker ps](https://user-images.githubusercontent.com/17884787/38791871-40c06e3e-4118-11e8-807a-1a343f10eb44.png)
 
 - After these you should be able to run your stack directly on the swarm 
 
@@ -128,7 +128,7 @@ Please Note recently, this connection give problems, on some computer If you hav
 
 and
 
-![docker ps](https://user-images.githubusercontent.com/17884787/38789544-f31aea2e-4108-11e8-9579-9877487803b5.png)
+![docker ps](https://user-images.githubusercontent.com/17884787/38791897-74408aa0-4118-11e8-8887-6bba0c867c8a.png)
 
 When you enter ls, you have a blank env, This is the problem in doing it this way is that, it becomes a little difficult to get your code to the swarm manager.
 ----
@@ -140,23 +140,7 @@ When you enter ls, you have a blank env, This is the problem in doing it this wa
 - In your Dockerfile create a redundant yet stable image where you would install git, and use it to clone this repository in the container. 
 from these container you can now copy the repository to the PWD of the docker, I chose to use these
 
-``` # Use an Ubuntu base image                                                                                                                                                   
-FROM ubuntu                                                                                                                                                                  
-                                                                                                                                                                             
-# Maintainers email                                                                                                                                                          
-MAINTAINER Ose Micah "osaosemwen@live.com"                                                                                                                                   
-                                                                                                                                                                             
-#Install the necessary dependencies                                                                                                                                          
-RUN apt-get update && apt-get install -y redis-server git                                                                                                                    
-                                                                                                                                                                             
-# Expose port for redis-server                                                                                                                                               
-EXPOSE 6379                                                                                                                                                                  
-                                                                                                                                                                             
-# Clone the repository that is actually needed                                                                                                                               
-RUN git clone https://github.com/osaosemwen/awsdockersdeployments                                                                                                                                                                                              
-                                                                                                                                                                             
-# Create                                                                                                                                                                     
-ENTRYPOINT ["/usr/bin/redis-server"] ```
+![external dockerfile](https://user-images.githubusercontent.com/17884787/38792039-159e1200-4119-11e8-9e5b-44d2af012fbf.png)
 
 - Build the image using
 
@@ -165,11 +149,13 @@ ENTRYPOINT ["/usr/bin/redis-server"] ```
 - Run this image using 
 
 ``` $ docker run --name redis_instance -t redis-server ```   
+
 you should have something similar to the figure below, but when you use -d after the run above it runs in the backgorund
 
 ![redis image](https://user-images.githubusercontent.com/17884787/38790105-cfcf8fc6-410c-11e8-9c3e-4e0227c8ab1c.png)
 
 - Copy the container ID of the image you just built from running ``` $ docker ps ```
+
 - Access the container using 
 
 ``` $ docker exec -it df01dbe0d2a0 bash ```
@@ -202,7 +188,7 @@ check your application on the cloud, you should have something similar to what I
 
 # Deploying the your App on Different Regions, there are two ways of doing it, it either create similar swarm on two regions and use ELB to handle traffic accorss this regions or you ssh from a different region and connect to the swarm and deploy your stack over these regions.
 
-If any one really want this please send me a mail, and I would create the repo. 
+If anyone really wants this please send me an email, and I would create the repo. 
 
 ### That is IT ENJOY !!!!
 
